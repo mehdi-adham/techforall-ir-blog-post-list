@@ -1,0 +1,146 @@
+@font-face {
+  font-family: Sahel;
+  src: url(fonts/sahel/Sahel.woff), url(fonts/sahel/Sahel.ttf);
+}
+/*:root {
+
+}*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Sahel, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  direction: rtl;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 12px;
+  padding: 2.5rem 12px;
+}
+.blog-posts .col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Post item style*/
+
+.post-item,
+.post-item-m {
+  background-color: white;
+  border-radius: 12px;
+  padding: 6px;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  gap: 12px;
+}
+
+/* post cover */
+.post-cover {
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: cadetblue;
+}
+.post-cover a {
+  display: block;
+  transition: 0.3s ease;
+}
+.post-cover a:hover {
+  transform: scale(1.1);
+}
+.post-cover img {
+  border-radius: 8px;
+}
+
+/* post info */
+.post-info {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 6px;
+}
+.post-title,
+.post-title a {
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  color: unset;
+}
+.post-title a:hover {
+  color: #35bff0;
+}
+.max-line-desc {
+  white-space: normal;
+  overflow: hidden;
+  height: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+.post-desc {
+  color: #505050;
+}
+.post-date {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 12px;
+  color: #505050;
+}
+
+/* ... */
+.flex-col {
+  flex-direction: column;
+}
+.no-padding {
+  padding: 0;
+}
+/* *** */
+
+/* post cover for min item */
+.post-item-m {
+  gap: 0;
+}
+.post-item-m .post-cover {
+  min-width: 105px;
+  max-width: 105px;
+}
+.post-item-m .post-cover img {
+  object-fit: cover;
+  height: 105px;
+}
+
+/* post info for min item */
+.post-item-m .post-info {
+  overflow: hidden;
+  white-space: normal;
+  height: 100px;
+}
+.post-item-m .post-desc {
+  -webkit-line-clamp: 2;
+}
+
+@media screen and (min-width: 900px) {
+  .blog-posts-container {
+    max-width: 1300px;
+    min-width: 1200px;
+    width: 100%;
+  }
+}
