@@ -27,6 +27,12 @@ img {
   display: block;
 }
 
+.blog-posts-container {
+  margin: 1.5rem 0;
+}
+.blog-posts-container h1{
+  text-align: center;
+}
 .blog-posts {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
